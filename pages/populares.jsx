@@ -1,15 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import Layout from '../components/layout/Layout';
 import DetallesProducto from '../components/layout/DetallesProducto';
 import useProductos from '../hooks/useProductos';
 
-const Home = () => {
+export default function Populares() {
 
-  
-  const {productos} = useProductos('creado');
+    const {productos} = useProductos('votos');
 
   return (
-    <div className="">
+    <div>
       <Layout>
         <div className="listado-productos">
           <div className="contenedor">
@@ -27,5 +26,3 @@ const Home = () => {
     </div>
   )
 }
-
-export default Home;
